@@ -11,6 +11,15 @@ import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
 const isDev = process.env.NODE_ENV === 'development';
 // https://vite.dev/config/
 export default defineConfig({
+  import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  base: '/Radon-Games/', // <-- Add this line
+});
+
   plugins: [
     tanstackRouter({
       target: 'react',
